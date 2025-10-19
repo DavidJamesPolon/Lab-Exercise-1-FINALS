@@ -1,0 +1,15 @@
+<?php
+$jsonString = '{"name":"David James","age":22,"email":"PolonDavidJames@example.com"}';
+
+$phpObject = json_decode($jsonString);
+
+$phpArray = json_decode($jsonString, true);
+
+echo "<h2>Decoded as PHP Object:</h2>";
+echo "Name: " . $phpObject->name . "<br>";
+echo "Email: " . $phpObject->email . "<br>";
+
+echo "<h2>Decoded as PHP Associative Array:</h2>";
+echo "Name: " . $phpArray['name'] . "<br>";
+echo "Email: " . $phpArray['email'] . "<br>";
+?>
