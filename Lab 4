@@ -1,0 +1,12 @@
+<?php
+$inputJSON = '{"username":"admin","password":"1234"}';
+
+$data = json_decode($inputJSON);
+
+if ($data && isset($data->username) && isset($data->password)) {
+    echo "Username: " . $data->username . "<br>";
+    echo "Password: " . $data->password . "<br>";
+} else {
+    echo "No valid JSON input received.";
+}
+?>
